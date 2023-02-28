@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <title>American Movies</title>
+  <script src="movies.js"></script>
+  <style>
+    p {
+      text-align: center;
+      line-height: 1.8;
+    }
+    table {
+      border: solid 1px #d3e4e8;
+    }
+    th, td {
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #d3e4e8;
+    }
+    </style>
+</head>
+
+<body>
+  <h1>American Movies</h1>
+  <h2>A database of American movies released since 1900</h2>
+
+  <p>
+    <label for="selectYearStart">Select year from </label>
+    <select id="selectYearStart">
+      <!-- Insert years as options here -->
+    </select>
+
+    <label for="selectYearEnd">to </label>
+    <select id="selectYearEnd">
+      <!-- Insert years as options here -->
+    </select>
+
+    &nbsp;
+
+    <button id="getAllYears" onclick="selectAllYears()">
+      Select All Years
+    </button>
+
+    &nbsp;
+    &nbsp;
+
+    <label for="selectGenre">Select genre: </label>
+    <select id="selectGenre">
+      <!-- Insert genres as options here -->
+    </select>
+
+    <br>
+
+    <input id="searchInput" placeholder="Search any title or cast">
+    </input>
+
+    <button id="findMovie" onclick="searchMovie(data)">
+      Search
+    </button>
+
+    &nbsp;
+    &nbsp;
+
+    <label for="selectMax">Records per page: </label>
+    <select id="selectMax">
+      <option>ALL</option>
+      <option>5</option>
+      <option>25</option>
+      <option>50</option>
+      <option>100</option>
+    </select>
+
+    <button id="previousPage" onclick="showPreviousPage()" hidden="hidden">
+      <
+    </button>
+
+    <button id="nextPage" onclick="showNextPage()" hidden="hidden">
+      >
+    </button>
+
+    &nbsp;
+    &nbsp;
+
+    <text>Total records found: <span id="totalRows"></span></text>
+
+    <span id="warning" style="color:#cc0000"></span>
+  </p>
+
+  <table id="movieTable">
+    <tbody><tr>
+      <th>Year</th>
+      <th>Title</th>
+      <th>Genres</th>
+      <th>Cast</th>
+    </tr>
+  </tbody></table>
+</body>
+</html>
