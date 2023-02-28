@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>CS5003 Practical 1 Advance</title>
+    <link href="advance.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Advance Higher or Lower</h1>
+	<div id="game">
+        <div id="dashboard">
+            <div id="gamePick">
+                <h3>Game Option</h3><br>
+                <!-- Radio input reference: https://www.w3schools.com/tags/att_input_type_radio.asp --> 
+                <input type="radio" id="pickHearts" name="selectOpt"><label for="pickHearts">Hearts Deck</label><br>
+                <input type="radio" id="pickFull" name="selectOpt"><label for="pickFull">Full Deck</label><br>
+            </div>
+            <div id="gameStart">
+                <button id="start">Start</button><br>
+                <button id="clear">Clear All Stats</button>
+            </div>
+            <div id id="gameScore">
+                <table>
+                    <tr>
+                        <th><h3>Best</h3></th>
+                        <th>Guess</th>
+                        <th>Score</th>
+                        <th>Time</th>
+                    </tr>
+                    <tr>
+                        <td>Hearts Deck: </td>
+                        <td><span id="heartsGuess"></span></td>
+                        <td><span id="heartsScore"></span></td>
+                        <td><span id="bestHeartsTime"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Full Deck: </td>
+                        <td><span id="fullGuess"></span></td>
+                        <td><span id="fullScore"></span></td>
+                        <td><span id="bestFullTime"></span></td>
+                        </tr>
+                    </table>
+            </div>
+        </div>
+        <div id="cardImg">
+            <img id="card" src="" style="display: none;">
+        </div>
+        <div id="buttons" style="display: none;">
+            <button id="higher">Higher</button>
+            <button id="lower">Lower</button>
+            <button id="skip">Skip</button>
+            <button id="hint">Hint</button>
+        </div>
+    </div>
+	<script src="./advance.js"></script>
+</body>
+</html>
